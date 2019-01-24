@@ -1,0 +1,24 @@
+{
+  "name": "create-react-app-halogen",
+  "version": "0.1.0",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "purescript-halogen": "^4.0.0",
+    "purescript-prelude": "^4.1.0",
+    "purescript-aff-promise": "^2.0.1",
+    "purescript-affjax": "^7.0.0",
+    "purescript-aff": "^5.0.2",
+    "purescript-console": "^4.1.0",
+    "purescript-effect": "^2.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^4.0.0"
+  }
+}
