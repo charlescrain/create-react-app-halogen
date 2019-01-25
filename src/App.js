@@ -1,11 +1,12 @@
 import React from 'react'
-import { test } from './Test.purs'
+import { test, halogenApp } from './Test.purs'
 import logo from './logo.svg'
 import './App.css'
 
 const App = function (props, context) {
   console.log(props)
   console.log(context)
+  halogenApp().then(({ clickButton }) => clickButton())
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +25,7 @@ const App = function (props, context) {
           Learn React
         </a>
       </header>
+      <div id="halogenApp" />
     </div>
   )
 }
