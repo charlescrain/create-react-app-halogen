@@ -1,12 +1,21 @@
 import React from 'react'
 import { test, halogenApp } from './Test.purs'
+import { queryCollectibles } from './GraphQLTest.purs'
 import logo from './logo.svg'
 import './App.css'
+
+const logIt = () => {
+  console.log('koook')
+}
 
 const App = function (props, context) {
   console.log(props)
   console.log(context)
-  halogenApp().then(({ clickButton }) => clickButton())
+  halogenApp().then(async ({ clickButton, clickEvent }) => {
+    await clickButton()
+    clickEvent(logIt)()
+  })
+  queryCollectibles()
   return (
     <div className="App">
       <header className="App-header">
